@@ -1,43 +1,127 @@
 /* src/App.css */
+/* MAIN SITE ATTRIBUTES */
+body {
+  background-color: white;
+  color: #222;
+}
 
 .container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 25px;
 }
 
-.header {
-  text-align: center;
-  padding-bottom: 2rem;
-}
-
-.name {
-  font-size: 3rem;
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0;
 }
 
-.title {
-  font-size: 1.3rem;
-  color: #555;
-  margin-top: 0.5rem;
+/* HEADER ATTRIBUTES */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  font-size: 2rem;
+  margin: 0;
+  color: rgb(0, 0, 0);
 }
 
 .nav {
-  margin-top: 1.5rem;
+  margin: 20px
 }
 
 .nav-link {
   margin: 0 15px;
-  color: #1e90ff;
+  color: #a6d3ff;
   text-decoration: none;
   font-weight: 600;
 }
 
-.main {
-  line-height: 1.6;
+.nav-link:hover {
+  color: #6f9ac5;
 }
+
+
+/* HOME ATTRIBUTES */
+/* SECTION 1 */
+.home-container {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-wel{
+  font-size: 1rem;
+}
+
+.home-intro{
+  font-size: 3rem;
+}
+
+.home-pos{
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.home-summary{
+  margin: 20px 0px;
+}
+
+.home-text{
+  width: 50%;
+}
+
+/* SECTION 2 */
+.home-proj-container{
+  padding: 20px 0px;
+}
+
+.home-proj-blocks-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.home-proj-block{
+  margin: 20px 20px;
+  width: 20rem;
+  height: 10rem;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+button{
+margin: auto;
+display: flex;
+padding: 5px 15px;
+border-radius: 30px;
+font-size: 1rem;
+}
+
+button:hover{
+  background-color: #666;
+  color: white;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+
 
 .section {
   margin-bottom: 3rem;
@@ -96,3 +180,5 @@
     transform: rotate(360deg);
   }
 }
+
+
