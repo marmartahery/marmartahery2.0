@@ -41,7 +41,6 @@ function Home() {
                                 <a href="/MarMarTahery_Resume2026.pdf"> <img src={clip}></img>
                                 </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
