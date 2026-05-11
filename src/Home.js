@@ -3,6 +3,7 @@ import './App.css';
 import togetherCA from './assets/togetherca.png';
 import phf from './assets/pethelpfinder.png';
 import ocnav from './assets/ocnav.png';
+import headshot from './assets/headshot.png';
 
 function Home() {
     const [selectedSkill, setSelectedSkill] = useState(null);
@@ -219,11 +220,24 @@ function Home() {
                         <h3>MarMar Tahery</h3>
                         <p>
                             Email: mtahery20@hotmail.com
-                            <a href="">Github</a>
-                            <a href="">LinkedIn</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/marmartahery">Github</a>
+                        </p>
+                        <p>
+                            <a href="https://www.linkedin.com/in/marmar-tahery/">LinkedIn</a>
+                        </p>
+                        <p>
+                            <a href="/MarMarTahery_Resume2026.pdf" download className="download-link">
+                                Download Resume
+                            </a>
                         </p>
                     </div>
-                    <p>picture</p>
+                    <div className="contact-pic">
+                        <img
+                            src={headshot}
+                            alt="Headshot Picture"></img>
+                    </div>
                 </div>
             </div>
 

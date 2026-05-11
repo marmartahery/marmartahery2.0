@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "marmartahery-f34de"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
