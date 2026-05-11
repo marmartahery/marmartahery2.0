@@ -1,37 +1,44 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import Home from './Home.js';
-import About from './About.js';
 import './App.css';
 
 function App() {
-  return (
-    <Router>
-      <div className="container">
+  const [darkMode, setDarkMode] = useState(true);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
+  return (
+    <div className={`container ${darkMode ? "dark-mode" : ""}`}>
       <header>
         <h1 className="nav-header">MT</h1>
-          <nav className="nav">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/exp" className="nav-link">Experience</Link>
-            <Link to="/skiprj" className="nav-link">Skills and Projects</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
-          </nav>
+
+        <nav className="nav">
+          <a href="#" className="nav-link">Home</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="#skills" className="nav-link">Skills</a>
+          <a href="#projects" className="nav-link">Projects</a>
+          <a href="#contact" className="nav-link">Contact</a>
+          <button
+            className="theme-toggle"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+        </nav>
       </header>
 
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </main>
+      <main className="main">
+        <Home />
+      </main>
 
-        <footer className="footer">
-          <p>© {new Date().getFullYear()} MarMar Tahery. All rights reserved.</p>
-        </footer>
-      </div>
-    </Router>
+    </div>
   );
 }
 

@@ -1,8 +1,40 @@
 /* src/App.css */
+:root {
+  --bg-gradient: radial-gradient(circle at top,
+      #BDC4D4 0%,
+      #D1CFC9 55%,
+      #F4F1EA 100%);
+
+  --text-color: #0F1A2B;
+  --nav-bg: rgba(209, 207, 201, 0.75);
+  --nav-text: #0F1A2B;
+  --nav-hover: #52677D;
+
+  --card-bg: rgba(255, 255, 255, 0.35);
+  --card-border: rgba(15, 26, 43, 0.25);
+  --card-shadow: rgba(15, 26, 43, 0.25);
+}
+
+.dark-mode {
+  --bg-gradient: radial-gradient(circle at top,
+      #52677D 0%,
+      #1C2E4A 55%,
+      #0F1A2B 100%);
+
+  --text-color: #D1CFC9;
+  --nav-bg: rgba(15, 26, 43, 0.75);
+  --nav-text: #D1CFC9;
+  --nav-hover: #52677D;
+
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --card-shadow: rgba(0, 0, 0, 0.35);
+}
 /* MAIN SITE ATTRIBUTES */
-body {
-  background-color: white;
-  color: #222;
+body{
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: background 2.5s ease, color 1.5s ease;
 }
 
 .container {
@@ -10,175 +42,240 @@ body {
   margin: 25px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h2{
+  text-decoration: underline;
+  padding-top: 10px !important;
+  padding-bottom: 5px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
 
-/* HEADER ATTRIBUTES */
+main {
+  padding-top: 20px;
+  margin-bottom: 100px;
+}
+
+.space-40 {
+  padding: 20px;
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--nav-text);
+  border-radius: 30px;
+  padding: 7px 7px;
+  cursor: pointer;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+/* NAVBAR */
+html {
+  scroll-behavior: smooth;
+}
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  color: var(--nav-text);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
-.nav-header {
-  font-size: 2rem;
-  margin: 0;
-  color: rgb(0, 0, 0);
+#about,
+#experience,
+#skills,
+#projects,
+#contact {
+  scroll-margin-top: 70px;
 }
 
 .nav {
-  margin: 20px
+  margin: 20px 40px 20px 20px;
 }
 
 .nav-link {
-  margin: 0 15px;
-  color: #a6d3ff;
+  margin: 0px 15px;
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #6f9ac5;
+  color: var(--nav-hover);
+  transform: translateY(-4px);
+  text-decoration: none;
 }
 
-
-/* HOME ATTRIBUTES */
-/* SECTION 1 */
+/* HOME */
 .home-container {
   padding: 25px 0px;
   display: flex;
   justify-content: space-between;
 }
 
-.home-wel{
-  font-size: 1rem;
+.home-text .prof-tag{
+  font-size: smaller;
+  font-weight: 400;
 }
 
-.home-intro{
-  font-size: 3rem;
+/* EXPERIENCE */
+.exp-container {
+  padding: 0px 0px 20px 20px;
 }
 
-.home-pos{
-  font-size: 1.5rem;
+.exp-container h4{
+  padding-left: 20px;
+  font-weight: normal;
   font-style: italic;
 }
 
-.home-summary{
-  margin: 20px 0px;
-}
-
-.home-text{
-  width: 50%;
-}
-
-/* SECTION 2 */
-.home-proj-container{
-  padding: 20px 0px;
-}
-
-.home-proj-blocks-container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.home-proj-block{
-  margin: 20px 20px;
-  width: 20rem;
-  height: 10rem;
-  background-color: #ddd;
-  border-radius: 20px;
-}
-
-button{
-margin: auto;
-display: flex;
-padding: 5px 15px;
-border-radius: 30px;
-font-size: 1rem;
-}
-
-button:hover{
-  background-color: #666;
-  color: white;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
-a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-
-.section {
-  margin-bottom: 3rem;
-}
-
-.project-list {
-  list-style-type: disc;
+.exp-container p{
   padding-left: 20px;
 }
 
-.footer {
+.exp-container ul{
+  margin: 5px;
+}
+
+/* SKILLS */
+.skill-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  width: 15rem;
+  height: 15rem;
+  perspective: 1000px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.skill-card:hover {
+  box-shadow: 5px 5px 5px var(--card-shadow);
+  border-radius: 20px;
+}
+
+.skill-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.skill-card.flipped .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front,
+.skill-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+}
+
+.skill-card-back {
+  transform: rotateY(180deg);
+  display: initial;
+  align-content: center;
+
+}
+
+/* PROJECTS */
+.proj-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 20px;
+  margin-bottom: 40px;
+  /* align-items: center; */
+}
+
+.proj-card
+{
+  width: 50%;
+}
+
+.proj-pic {
+  /* width: 50%; */
+  min-height: 15rem;
+  /* border: 2px solid black; */
+  margin-left: 10px;
+}
+
+.proj-pic img {
+  width: 100%;
+  height: 20rem;
+  object-fit: contain;
+}
+
+.proj-container a{
+  color: var(--nav-text);
+  transition: color 1.5s ease;
+}
+
+.proj-container p{
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+/* CONTACT */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+
+
+/* .footer {
   text-align: center;
   color: #666;
   border-top: 1px solid #ddd;
   padding-top: 1rem;
-}
-
-/* testing */
-
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
+} */
