@@ -108,7 +108,23 @@
 }
 
 .right-sidebar {
+  margin-top: 20px;
   width: 60%;
+}
+
+.fade-line {
+  width: 80%;
+  height: 1px;
+  margin: 40px auto;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--text-color),
+    transparent
+  );
+
+  opacity: 0.25;
 }
 
 /* MAIN SITE ATTRIBUTES */
@@ -217,6 +233,7 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin-top: 5px;
 }
 
 .skill-card{

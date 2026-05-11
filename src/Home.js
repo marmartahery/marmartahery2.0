@@ -38,7 +38,7 @@ function Home() {
                                 </a>
                                 <a href="https://www.twitch.tv/marmargaritaa" target="_blank"> <img src={twitch}></img>
                                 </a>
-                                <a href="assets/MarMarTahery_Resume2026.pdf" target="_blank"> <img src={clip}></img>
+                                <a href="/MarMarTahery_Resume2026.pdf" target="_blank"> <img src={clip}></img>
                                 </a>
                             </div>
 
@@ -56,7 +56,7 @@ function Home() {
                         I am a software engineer and web developer residing in Los Angeles, CA. I specialize in building web applications and sites with both front and back end functionality, efficiently maintain and troubleshoot various system, software, hardware, and applications, and enjoy assisting in web page styling while keeping UX/UI as the main priority.
                     </div>
                 </div>
-                <div className="space-20"></div>
+                <div className="fade-line"></div>
                 {/* EXPERIENCE */}
                 <div id="experience">
                     <h2>Experience</h2>
@@ -87,6 +87,10 @@ function Home() {
                         </p>
                     </div>
                     <div className="exp-container">
+                        <h3>California State University, Northridge</h3>
+                        <h4>Bachelor's of Science in Computer Science, Minor in Computational Mathematics – May 2022</h4>
+                    </div>
+                    <div className="exp-container">
                         <h3>Wells Fargo Bank</h3>
                         <h4>Operations Supervisor – November 2015 - February 2022</h4>
                         <p>
@@ -95,8 +99,9 @@ function Home() {
                             In addition to supporting workflow and customer relations, I regularly participated in and led team meetings focused on improving processes, strengthening collaboration, and finding new ways to enhance the overall customer experience.
                         </p>
                     </div>
+
                 </div>
-                <div className="space-20"></div>
+                <div className="fade-line"></div>
                 {/* SKILLS */}
                 <div id="skills">
                     <h2>Skills</h2>
@@ -182,8 +187,7 @@ function Home() {
 
                     </div>
                 </div>
-                <div className="space-20"></div>
-
+                <div className="fade-line"></div>
                 {/* PROJECTS */}
                 <div id="projects">
                     <h2>Projects</h2>
