@@ -38,7 +38,7 @@ function Home() {
                                 </a>
                                 <a href="https://www.twitch.tv/marmargaritaa" target="_blank"> <img src={twitch}></img>
                                 </a>
-                                <a href="/MarMarTahery_Resume2026.pdf" target="_blank"> <img src={clip}></img>
+                                <a href="/MarMarTahery_Resume2026.pdf"> <img src={clip}></img>
                                 </a>
                             </div>
 
